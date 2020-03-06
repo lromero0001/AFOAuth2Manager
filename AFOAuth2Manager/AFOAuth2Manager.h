@@ -106,7 +106,7 @@ NS_ASSUME_NONNULL_BEGIN
                                                  username:(NSString *)username
                                                  password:(NSString *)password
                                                     scope:(nullable NSString *)scope
-                                                  success:(void (^)(AFOAuthCredential *credential))success
+                                                  success:(void (^)(AFOAuthCredential *credential, id _Nullable responseObject))success
                                                   failure:(void (^)(NSError *error))failure;
 
 /**
@@ -119,7 +119,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSURLSessionTask *)authenticateUsingOAuthWithURLString:(NSString *)URLString
                                                     scope:(nullable NSString *)scope
-                                                  success:(void (^)(AFOAuthCredential *credential))success
+                                                  success:(void (^)(AFOAuthCredential *credential, id _Nullable responseObject))success
                                                   failure:(void (^)(NSError *error))failure;
 
 /**
@@ -131,7 +131,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSURLSessionTask *)authenticateUsingOAuthWithURLString:(NSString *)URLString
                                              refreshToken:(NSString *)refreshToken
-                                                  success:(void (^)(AFOAuthCredential *credential))success
+                                                  success:(void (^)(AFOAuthCredential *credential, id _Nullable responseObject))success
                                                   failure:(void (^)(NSError *error))failure;
 
 /**
@@ -145,7 +145,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSURLSessionTask *)authenticateUsingOAuthWithURLString:(NSString *)URLString
                                                      code:(NSString *)code
                                               redirectURI:(NSString *)uri
-                                                  success:(void (^)(AFOAuthCredential *credential))success
+                                                  success:(void (^)(AFOAuthCredential *credential, id _Nullable responseObject))success
                                                   failure:(void (^)(NSError *error))failure;
 
 /**
@@ -158,7 +158,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSURLSessionTask *)authenticateUsingOAuthWithURLString:(NSString *)URLString
                                                parameters:(NSDictionary *)parameters
-                                                  success:(void (^)(AFOAuthCredential *credential))success
+                                                  success:(void (^)(AFOAuthCredential *credential, id _Nullable responseObject))success
                                                   failure:(void (^)(NSError *error))failure;
 
 @end
